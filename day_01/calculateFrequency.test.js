@@ -1,4 +1,5 @@
 const calculateFrequency = require('./calculateFrequency')
+const { readFileInLines } = require('../utilities/readFile')
 
 test('+1, -2, +3, +1 = 3', () => {
   const actual = calculateFrequency([1, -2, 3, 1])
@@ -24,8 +25,10 @@ test('-1, -2, -3, = -6', () => {
   expect(actual).toEqual(expected)
 })
 
-test('-1, -2, -3, = -6', () => {
-  const actual = calculateFrequency([-1, -2, -3])
-  const expected = -6
+test('large input test', () => {
+  const rawInput = readFileInLines(__dirname, 'largeInput.txt')
+  const input = rawInput.map(x => parseInt(x, 10))
+  const actual = calculateFrequency(input)
+  const expected = 561
   expect(actual).toEqual(expected)
 })

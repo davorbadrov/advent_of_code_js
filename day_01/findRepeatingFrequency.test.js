@@ -1,4 +1,5 @@
 const findRepeatingFrequency = require('./findRepeatingFrequency')
+const { readFileInLines } = require('../utilities/readFile')
 
 test('+1, -2, +3, +1 => 2 repeats', () => {
   const actual = findRepeatingFrequency([1, -2, 3, 1])
@@ -33,5 +34,13 @@ test('-6, +3, +8, +5, -6 => 5 repeats', () => {
 test('7, 7, -2, -7, -4 => 0 repeats', () => {
   const actual = findRepeatingFrequency([7, 7, -2, -7, -4])
   const expected = 14
+  expect(actual).toEqual(expected)
+})
+
+test('large input test', () => {
+  const rawInput = readFileInLines(__dirname, 'largeInput.txt')
+  const input = rawInput.map(x => parseInt(x, 10))
+  const actual = findRepeatingFrequency(input)
+  const expected = 563
   expect(actual).toEqual(expected)
 })

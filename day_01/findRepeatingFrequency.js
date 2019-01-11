@@ -10,7 +10,7 @@ module.exports = findRepeatingFrequency
 function findRepeatingFrequency (frequencyList) {
   let result = 0
   const calculatedFrequencySet = new Set([result])
-
+  let it = 0
   while (true) {
     for (let frequencyChange of frequencyList) {
       result = result + frequencyChange
