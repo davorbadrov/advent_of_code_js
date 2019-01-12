@@ -1,5 +1,5 @@
 const findRepeatingFrequency = require('./findRepeatingFrequency')
-const { readFileInLines } = require('../utilities/readFile')
+const { readFileInLines } = require('../utilities/file')
 
 test('+1, -2, +3, +1 => 2 repeats', () => {
   const actual = findRepeatingFrequency([1, -2, 3, 1])

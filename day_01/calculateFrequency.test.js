@@ -1,5 +1,5 @@
 const calculateFrequency = require('./calculateFrequency')
-const { readFileInLines } = require('../utilities/readFile')
+const { readFileInLines } = require('../utilities/file')
 
 test('+1, -2, +3, +1 = 3', () => {
   const actual = calculateFrequency([1, -2, 3, 1])

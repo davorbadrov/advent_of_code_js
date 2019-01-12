@@ -1,5 +1,5 @@
 const calculateBoxIdChecksum = require('./calculateBoxIdChecksum')
-const { readFileInLines } = require('../utilities/readFile')
+const { readFileInLines } = require('../utilities/file')
 
 test('simple inputs', () => {
   const inputs = [

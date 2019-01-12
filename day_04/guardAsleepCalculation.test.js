@@ -1,5 +1,5 @@
 const guardAsleepCalculation = require('./guardAsleepCalculation')
-const { readFileInLines } = require('../utilities/readFile')
+const { readFileInLines } = require('../utilities/file')
 
 describe('find most asleep guard', () => {
   test('simple input', () => {

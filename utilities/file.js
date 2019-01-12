@@ -3,7 +3,8 @@ const path = require('path')
 
 module.exports = {
   readFile,
-  readFileInLines
+  readFileInLines,
+  writeFile
 }
 
 function readFile (fileDirectory, fileName) {
@@ -16,4 +17,9 @@ function readFileInLines (fileDirectory, fileName) {
   return fileContents
     .split('\n')
     .filter(x => x)
+}
+
+function writeFile (fileDirectory, fileName, fileContent) {
+  const filePath = path.join(fileDirectory, fileName)
+  return fs.writeFileSync(filePath, fileContent, 'utf-8')
 }

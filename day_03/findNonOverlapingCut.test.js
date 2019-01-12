@@ -1,5 +1,5 @@
 const findNonOverlapingCut = require('./findNonOverlapingCut')
-const { readFileInLines } = require('../utilities/readFile')
+const { readFileInLines } = require('../utilities/file')
 
 test('simple inputs', () => {
   const inputs = [
