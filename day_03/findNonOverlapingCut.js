@@ -49,6 +49,7 @@ function parseCuts (cutString) {
   const y2 = y1 + wy
 
   return {
+    id,
     lt: {x: x1, y: y1}, // left top
     rb: {x: x2, y: y2}  // right bottom
   }
