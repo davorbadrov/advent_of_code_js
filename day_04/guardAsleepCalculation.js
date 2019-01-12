@@ -1,5 +1,3 @@
-// const parse = require('date-fns/parse')
-
 module.exports = guardAsleepCalculation
 
 function guardAsleepCalculation (guardSleepingLogStrings) {
